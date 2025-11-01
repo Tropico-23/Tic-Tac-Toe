@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Toe — Play vs Unbeatable Bot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">TTT</div>
+        <div>
+          <h1>Play vs Unbeatable Bot</h1>
+          <p class="lead">Try to beat an unbeatable JavaScript bot</p>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="reset" class="btn">New Game</button>
+        <button id="swap" class="ghost">Play as O</button>
+      </div>
+    </header>
+
+    <section class="board-wrap">
+      <div id="board" class="board" aria-label="tic tac toe board" role="grid"></div>
+      <div style="display:flex;gap:12px;align-items:center;justify-content:center;width:100%">
+        <div class="footer-small">Your mark: <strong id="playerMark">X</strong></div>
+        <div class="footer-small">Bot mark: <strong id="botMark">O</strong></div>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <h3>Game Status</h3>
+      <div class="status" id="status">Make your move — you go first.</div>
+
+      <div class="score">
+        <div class="card"><div class="footer-small">You</div><div class="big" id="score-player">0</div></div>
+        <div class="card"><div class="footer-small">Draws</div><div class="big" id="score-draw">0</div></div>
+        <div class="card"><div class="footer-small">Bot</div><div class="big" id="score-bot">0</div></div>
+      </div>
+
+      <div style="margin-top:8px">
+        <label class="footer-small">Difficulty</label>
+        <select id="difficulty" style="width:100%;margin-top:8px;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)">
+          <option value="unbeatable">Unbeatable (Minimax)</option>
+          <option value="easy">Easy (Random)</option>
+        </select>
+      </div>
+
+      <div style="flex:1"></div>
+      <div class="footer-small">Built with ❤️ — try forcing mistakes to see how the bot reacts.</div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
